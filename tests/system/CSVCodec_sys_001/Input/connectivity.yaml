@@ -8,7 +8,7 @@ plugins:
     class: com.softwareag.samples.FileTransport
    
   CSVCodec:
-    classpath: ${APAMA_WORK}/lib/csv-codec-sample.jar
+    classpath: ${APAMA_WORK}/lib/csv-codec.jar
     class: com.softwareag.samples.CSVCodec
 
 
