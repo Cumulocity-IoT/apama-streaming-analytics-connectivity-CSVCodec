@@ -1,0 +1,32 @@
+# $Copyright(c) 2016 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.$
+# Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG
+
+plugins:
+  FileTransport:
+    classpath:
+      - ${APAMA_WORK}/lib/file-transport-plugins.jar
+    class: com.softwareag.samples.FileTransport
+   
+  CSVCodec:
+    classpath: ${APAMA_WORK}/lib/csv-codec-sample.jar
+    class: com.softwareag.samples.CSVCodec
+
+
+startChains:
+  CSVChain:
+    - apama.eventMap:
+        defaultEventType: com.softwareag.samples.Test
+        # Capture events to this channel
+        subscribeChannels:
+          - data
+        allowMissing: true
+
+    - CSVCodec:
+       EventType: 
+        -name 
+        -number 
+        -email
+
+    - FileTransport:
+        hostToFile: output.txt
+        fileToHost: input.txt

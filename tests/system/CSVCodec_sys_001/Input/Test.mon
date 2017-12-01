@@ -1,0 +1,27 @@
+package com.softwareag.samples;
+
+using com.softwareag.connectivity.ConnectivityPlugins;
+
+event Test {
+	string name;
+	integer number;
+	string email;
+}
+
+monitor Simple {
+	ConnectivityPlugins connectivity;
+	
+	action onload() {
+		Test test;
+		on all Test():test {
+			log "Received: "+test.toString();
+			send test to "received";
+
+			// Send Test events to the data channel the CSV Plugin is registered for
+			send test to "data";
+		}
+		
+		// Signify our application is ready to receive data
+		connectivity.onApplicationInitialized();
+	}
+}

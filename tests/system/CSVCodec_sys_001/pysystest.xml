@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<pysystest type="auto" state="runnable">
+    
+  <description> 
+    <title>CSV Codec input and output system test</title>
+    <purpose><![CDATA[
+Reads CSV data from input.txt file and converts to com.softwareag.samples.Test event sent to the correlator.
+Reflect these events back out to the CSV plugin to be converted back to a CSV file.
+]]>
+
+    </purpose>
+  </description>
+
+  <classification>
+    <groups>
+      <group></group>
+    </groups>
+  </classification>
+
+  <data>
+    <class name="PySysTest" module="run"/>
+  </data>
+  
+  <traceability>
+    <requirements>
+      <requirement id=""/>     
+    </requirements>
+  </traceability>
+</pysystest>

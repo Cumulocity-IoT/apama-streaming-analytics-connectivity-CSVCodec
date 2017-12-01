@@ -1,0 +1,4 @@
+com.softwareag.samples.Test("Damon",5551111,"damon@none.xyz")
+com.softwareag.samples.Test("Stefan",5552222,"ssalva@notmail.net")
+com.softwareag.samples.Test("Bonnie",5553333,"bonbon@nonet.edu")
+com.softwareag.samples.Test("Elena",5554444,"egilb@nooglemail.com")

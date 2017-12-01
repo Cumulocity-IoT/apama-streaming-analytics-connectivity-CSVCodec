@@ -1,0 +1,6 @@
+Name,Number,Email
+Damon	5551111; damon@none.xyz
+Stefan,5552222,ssalva@notmail.net
+Bonnie, 5553333, bonbon@nonet.edu
+Elena; 5554444, egilb@nooglemail.com
+
