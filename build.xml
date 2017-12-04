@@ -52,8 +52,8 @@
 		</jar>
 	</target>
 	
-	<target name="copy" description="Build plugin and copy to APAMA_WORK/lib" depends="build">
-		<copy file="${output-jar}" todir="${env.APAMA_WORK}/lib/"/>
+	<target name="copy" description="Build plugin and copy to APAMA_HOME/lib" depends="build">
+		<copy file="${output-jar}" todir="${env.APAMA_HOME}/lib/"/>
 	</target>
 
 </project>
