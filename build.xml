@@ -22,7 +22,20 @@
 	<property name="output-jar" location="${output-dir}/csv-codec-sample.jar"/>
 	<tstamp/>
 	
-	<import file="../FileTransport/build.xml" />
+<!--
+		If the subdir exists use it (submodule or manual)
+	-->
+	<condition property="FileTransportBuildScript" value="FileTransport/build.xml">
+		<available file="${basedir}/FileTransport" type="dir"/>
+	</condition>
+	<!--
+		If the subdir !exists assume in source and that it is located adjacent to this basedir
+	-->
+	<condition property="FileTransportBuildScript" value="../FileTransport/build.xml">
+		<not> <available file="${basedir}/FileTransport" type="dir"/> </not>
+	</condition>
+
+	<!--import file="${FileTransportBuildScript}" /-->
 
 	<path id="plugin-classpath">
 		<fileset dir="${APAMA_HOME}/lib">
@@ -51,6 +64,10 @@
 				<attribute name="Class-Path" value="${plugin-classpath.prop}"/>
 			</manifest>
 		</jar>
+	</target>
+
+	<target name="file-transport-copy" description="File Transport Build and Copy">
+		<ant antfile="${FileTransportBuildScript}" target="file-transport-copy"/>
 	</target>
 	
 	<target name="copy" description="Build plugin and copy to APAMA_WORK/lib" depends="build, file-transport-copy">

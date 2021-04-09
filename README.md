@@ -21,18 +21,18 @@ But if you do not have access to ANT, it will need to be built manually:
 For Linux:
 > mkdir build_output
 > javac -cp $APAMA_HOME/lib/connectivity-plugins-api.jar -d build_output src/com/softwareag/samples/*.java
-> jar -cf build_output/csv-codec.jar -C build_output .
+> jar -cf build_output/csv-codec-sample.jar -C build_output .
 > cp build_output/csv-codec.jar $APAMA_WORK/lib/
 
 For Windows:
 > mkdir build_output
 > javac -cp %APAMA_HOME%/lib/connectivity-plugins-api.jar -d build_output src/com/softwareag/samples/*.java
-> jar -cf build_output/csv-codec.jar -C build_output .
+> jar -cf build_output/csv-codec-sample.jar -C build_output .
 > copy build_output\csv-codec.jar %APAMA_WORK%\lib\
 
 A successful build will produce output files for the CSV codec:
 
-	build-output/csv-codec.jar
+	build-output/csv-codec-sample.jar
 
 These should have already been copied to APAMA_WORK/lib where the correlator will load them from.
 
@@ -85,7 +85,7 @@ received.evt contains the events received by the correlator that have been proce
 [John Heath](mailto:John.Heath@softwareag.com)
 
 ## License
-Copyright (c) 2017-2019 Software AG, Darmstadt, Germany and/or its licensors
+Copyright (c) 2017-2020 Software AG, Darmstadt, Germany and/or its licensors
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the License at
@@ -96,6 +96,6 @@ either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 
 ______________________
-These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the main project.
 _____________
 Contact us at [TECHcommunity](mailto:technologycommunity@softwareag.com?subject=Github/SoftwareAG) if you have any questions.
