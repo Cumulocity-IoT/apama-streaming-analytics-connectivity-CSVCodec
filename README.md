@@ -1,11 +1,11 @@
 # apama-streaming-analytics-connectivity-CSVCodec
-Java based Connectivity Codec for converting to/from CSV for use with [Apama](http://www.apamacommunity.com/).
+Java based Connectivity Codec for converting to/from CSV for use with [Apama](https://www.apamacommunity.com/).
 
 ## Description
-Converts the given event map data to the CSV format (and vice versa). For more information on the Apama Connectivity Framework, as well as Apama in general, please see [the community website](http://www.apamacommunity.com/). Furthermore, if you wish to examine this plugin in more detail, [a blog describing it also exists](http://www.apamacommunity.com/creating-your-own-apama-connectivity-plugins/).
+Converts the given event map data to the CSV format (and vice versa). For more information on the Apama Connectivity Framework, as well as Apama in general, please see [the community website](https://www.apamacommunity.com/). Furthermore, if you wish to examine this plugin in more detail, [a blog describing it also exists](https://www.apamacommunity.com/creating-your-own-apama-connectivity-plugins/).
 
 ## Set-up
-First, ensure you have an install of the Apama engine; a free edition is available at [the community website](http://www.apamacommunity.com/). This plugin assumes the user has familiarity with the basic structure of the install, more information of which can also be found on the community site.
+First, ensure you have an install of the Apama engine; a free edition is available at [the community website](https://www.apamacommunity.com/). This plugin assumes the user has familiarity with the basic structure of the install, more information of which can also be found on the community site.
 
 Building and running this sample requires access to the Correlator and Apama command line tools.
 

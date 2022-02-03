@@ -1,10 +1,20 @@
-# Copyright (c) 2017 Software AG, Darmstadt, Germany and/or its licensors 
+__pysys_title__   = r""" CSV Codec input and output system test """
+#                        ================================================================================
+
+__pysys_purpose__ = r""" Reads CSV data from input.txt file and converts to com.softwareag.samples.Test event sent to the correlator.
+	Reflect these events back out to the CSV plugin to be converted back to a CSV file.
+	"""
+
+__pysys_authors__ = ""
+
+# Copyright (c) 2017, 2021 Software AG, Darmstadt, Germany and/or its licensors 
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 #
 #   http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 # Sample PySys testcase
+
 from pysys.constants import *
 from pysys.basetest import BaseTest
 from apama.correlator import CorrelatorHelper
@@ -27,8 +37,8 @@ class PySysTest(BaseTest):
 		correlator.injectMonitorscript('Test.mon')
 
 		# wait until the output is on disk
-		self.waitForSignal('received.evt', expr="com")
-		self.waitForSignal('output.txt', expr="com")
+		self.waitForGrep('received.evt', expr="com")
+		self.waitForGrep('output.txt', expr="com")
 
 	def validate(self):
 		self.assertGrep('testcorrelator.out', expr=' (ERROR|FATAL) ', contains=False)
