@@ -2,7 +2,7 @@
 Java based Connectivity Codec for converting to/from CSV for use with [Apama](https://www.apamacommunity.com/).
 
 ## Description
-Converts the given event map data to the CSV format (and vice versa). For more information on the Apama Connectivity Framework, as well as Apama in general, please see [the community website](https://www.apamacommunity.com/). Furthermore, if you wish to examine this plugin in more detail, [a blog describing it also exists](https://www.apamacommunity.com/creating-your-own-apama-connectivity-plugins/).
+Converts the given event map data to the CSV format (and vice versa). For more information on the Apama Connectivity Framework, as well as Apama in general, please see [the community website](https://www.apamacommunity.com/). Furthermore, if you wish to examine this plugin in more detail, a blog describing it also exists named "creating-your-own-apama-connectivity-plugins".
 
 ## Set-up
 First, ensure you have an install of the Apama engine; a free edition is available at [the community website](https://www.apamacommunity.com/). This plugin assumes the user has familiarity with the basic structure of the install, more information of which can also be found on the community site.
@@ -36,14 +36,14 @@ A successful build will produce output files for the CSV codec:
 
 These should have already been copied to APAMA_WORK/lib where the correlator will load them from.
 
-To run the sample, you will also need to have built the [File Transport](https://github.com/SoftwareAG/apama-streaming-analytics-connectivity-FileTransport) to create a full connectivity chain.
+To run the sample, you will also need to have built the [File Transport](https://github.com/Cumulocity-IoT/apama-streaming-analytics-connectivity-FileTransport) to create a full connectivity chain.
 
 ## Running the sample
-You can either run the sample via the [Pysys](https://sourceforge.net/projects/pysys/files/pysys/) framework by invoking the tests, or by passing the yaml Connectivity configuration file to the Correlator.
+You can either run the sample via the [PySys](https://pysys-test.github.io/pysys-test/) framework by invoking the tests, or by passing the yaml Connectivity configuration file to the Correlator.
 
 When run, the sample creates a connectivity plugin chain. The chain will have the correlator at one end and to access the 'ouside world', a plugin chain must end with a Transport. For this sample we use the File Transport which can read in data from a file to be passed towards the host correlator, or write data out to a file that has come from the host correlator. Between the File Transport and the correlator is the CSV Plugin which will convert CSV data from the file to events to be processed, or vice-versa.
 
-To run via [Pysys](https://sourceforge.net/projects/pysys/files/pysys/), go to the tests directory and invoke the command: 
+To run via [PySys](https://pysys-test.github.io/pysys-test/), go to the tests directory and invoke the command: 
   
 	pysys run
 
@@ -79,13 +79,8 @@ Running the sample will produce the output files:
 
 received.evt contains the events received by the correlator that have been processed by the plugin chain. output.txt is the file written by transport in CSV format of events sent from the correlator. You'll note the original input file (input.txt) had a mix of different delimiters and additional whitespace; the codec wrote out a more conventional CSV file using only commas.
  
-# Authors
-[Callum Attryde](mailto:Callum.Attryde@softwareag.com)
-
-[John Heath](mailto:John.Heath@softwareag.com)
-
 ## License
-Copyright (c) 2017-2020 Software AG, Darmstadt, Germany and/or its licensors
+Copyright (c) 2017-present Cumulocity GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the License at
@@ -96,6 +91,6 @@ either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 
 ______________________
-These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the main project.
+These tools are provided as-is and without warranty or support. They do not constitute part of the Cumulocity products. Users are free to use, fork and modify them, subject to the license agreement. While Cumulocity welcomes contributions, we cannot guarantee to include every contribution in the main project.
 _____________
-Contact us at [TECHcommunity](mailto:technologycommunity@softwareag.com?subject=Github/SoftwareAG) if you have any questions.
+Contact us at https://apamacommunity.com if you have any questions.
