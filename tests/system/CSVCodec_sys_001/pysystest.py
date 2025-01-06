@@ -1,13 +1,13 @@
 __pysys_title__   = r""" CSV Codec input and output system test """
 #                        ================================================================================
 
-__pysys_purpose__ = r""" Reads CSV data from input.txt file and converts to com.softwareag.samples.Test event sent to the correlator.
+__pysys_purpose__ = r""" Reads CSV data from input.txt file and converts to com.apama.samples.Test event sent to the correlator.
 	Reflect these events back out to the CSV plugin to be converted back to a CSV file.
 	"""
 
 __pysys_authors__ = ""
 
-# Copyright (c) 2017, 2021 Software AG, Darmstadt, Germany and/or its licensors 
+# Copyright (c) 2017, 2021 Cumulocity GmbH, Duesseldorf, Germany and/or its affiliates and/or their licensors. 
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 #
 #   http://www.apache.org/licenses/LICENSE-2.0

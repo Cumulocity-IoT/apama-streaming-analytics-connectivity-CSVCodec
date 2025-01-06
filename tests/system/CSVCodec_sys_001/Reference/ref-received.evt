@@ -1,4 +1,4 @@
-com.softwareag.samples.Test("Damon",5551111,"damon@none.xyz")
-com.softwareag.samples.Test("Stefan",5552222,"ssalva@notmail.net")
-com.softwareag.samples.Test("Bonnie",5553333,"bonbon@nonet.edu")
-com.softwareag.samples.Test("Elena",5554444,"egilb@nooglemail.com")
+com.apama.samples.Test("Damon",5551111,"damon@none.xyz")
+com.apama.samples.Test("Stefan",5552222,"ssalva@notmail.net")
+com.apama.samples.Test("Bonnie",5553333,"bonbon@nonet.edu")
+com.apama.samples.Test("Elena",5554444,"egilb@nooglemail.com")
