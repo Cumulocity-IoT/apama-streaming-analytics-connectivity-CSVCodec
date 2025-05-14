@@ -18,7 +18,7 @@
 
 	<!-- Add user-defined properties here (use lowerCamelCase for property names) -->
 
-	<!-- Import OS-specific ${...} properties from pysys-windows.properties or pysys-unix.properties file if it exists. -->
+	<!-- Import OS-specific ${...} properties from pysys-unix.properties file if it exists. -->
 	<property file="pysys-${osfamily}.properties" pathMustExist="false"/>
 
 	<!-- Custom test framework plugins, if needed -->
